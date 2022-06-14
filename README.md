@@ -1,16 +1,33 @@
-### Hi there 👋
+```php
+<?php
 
-<!--
-**0xKomi/0xKomi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+namespace Komi;
 
-Here are some ideas to get you started:
+class About extends Me
+{
+    public function getCurrentWorkplace(): array
+    {
+        return [
+            'workplace' => [
+                'company' => 'Shithook',
+                'position' => 'Co-Founder'         
+            ]
+        ];
+    }
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    public function getDailyKnowledge(): array
+    {
+        return [
+            Cpp::class,
+            Javascript::class,
+            Csharp::class,
+            Python::class,
+        ];
+    }
+
+    public function getFutureGoal(): string
+    {
+        return 'money.';
+    }
+}
+```
